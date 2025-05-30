@@ -5,11 +5,11 @@
  *
  * No memory is consumed in the sketch if your code does not call any of the string methods
  * You can change the text of the strings, make sure the short strings are each exactly 3 characters 
- * the long strings can be any length up to the constant dt_MAX_STRING_LEN defined in TimeLib.h
+ * the long strings can be any length up to the constant dt_MAX_STRING_LEN defined in TimeLib32.h
  * 
  */
 
-#include <Arduino.h>
+ #include <ArduinoFake.h>
 
 // Arduino.h should properly define PROGMEM, PGM_P, strcpy_P, pgm_read_byte, pgm_read_ptr
 // But not all platforms define these as they should.  If you find a platform needing these
@@ -47,9 +47,9 @@ const PROGMEM char * const PROGMEM monthNames_P_es[] =
     monthStr7_es,monthStr8_es,monthStr9_es,monthStr10_es,monthStr11_es,monthStr12_es
 };
 
-const char monthShortNames_P_es[] PROGMEM = "ErrEneFebMarAbrMayJunJulAgoSepOctNovDic";
+const char monthShortNames_P_es[] PROGMEM = "???EneFebMarAbrMayJunJulAgoSepOctNovDic";
 
-const char dayStr0_es[] PROGMEM = "Err";
+const char dayStr0_es[] PROGMEM = "";
 const char dayStr1_es[] PROGMEM = "Domingo";
 const char dayStr2_es[] PROGMEM = "Lunes";
 const char dayStr3_es[] PROGMEM = "Martes";
@@ -63,7 +63,7 @@ const PROGMEM char * const PROGMEM dayNames_P_es[] =
    dayStr0_es,dayStr1_es,dayStr2_es,dayStr3_es,dayStr4_es,dayStr5_es,dayStr6_es,dayStr7_es
 };
 
-const char dayShortNames_P_Es[] PROGMEM = "ErrDomLunMarMieJueVieSab";
+const char dayShortNames_P_Es[] PROGMEM = "???DomLunMarMieJueVieSab";
 
 /* functions to return date strings */
 

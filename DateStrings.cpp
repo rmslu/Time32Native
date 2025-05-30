@@ -5,7 +5,7 @@
  *
  * No memory is consumed in the sketch if your code does not call any of the string methods
  * You can change the text of the strings, make sure the short strings are each exactly 3 characters 
- * the long strings can be any length up to the constant dt_MAX_STRING_LEN defined in TimeLib.h
+ * the long strings can be any length up to the constant dt_MAX_STRING_LEN defined in TimeLib32.h
  * 
  */
 
@@ -21,7 +21,7 @@
 
 #include "TimeLib32.h"
 
- 
+
 // the short strings for each day or month must be exactly dt_SHORT_STR_LEN
 #define dt_SHORT_STR_LEN  3 // the length of short strings
 
@@ -47,9 +47,9 @@ const PROGMEM char * const PROGMEM monthNames_P[] =
     monthStr7,monthStr8,monthStr9,monthStr10,monthStr11,monthStr12
 };
 
-const char monthShortNames_P[] PROGMEM = "ErrJanFebMarAprMayJunJulAugSepOctNovDec";
+const char monthShortNames_P[] PROGMEM = "???JanFebMarAprMayJunJulAugSepOctNovDec";
 
-const char dayStr0[] PROGMEM = "Err";
+const char dayStr0[] PROGMEM = "";
 const char dayStr1[] PROGMEM = "Sunday";
 const char dayStr2[] PROGMEM = "Monday";
 const char dayStr3[] PROGMEM = "Tuesday";
@@ -63,7 +63,7 @@ const PROGMEM char * const PROGMEM dayNames_P[] =
    dayStr0,dayStr1,dayStr2,dayStr3,dayStr4,dayStr5,dayStr6,dayStr7
 };
 
-const char dayShortNames_P[] PROGMEM = "ErrSunMonTueWedThuFriSat";
+const char dayShortNames_P[] PROGMEM = "???SunMonTueWedThuFriSat";
 
 /* functions to return date strings */
 

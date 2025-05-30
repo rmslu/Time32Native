@@ -23,21 +23,8 @@
 #include <sys/types.h> // for __time_t_defined, but avr libc lacks sys/types.h
 #endif
 
-#ifndef USE_UINT64_T
-#define USE_UINT64_T 1 // Use define to fix 2106 year problem. Only for ESP enviroments.
-#endif
+typedef unsigned long long time32_t;
 
-#if USE_UINT64_T == 1
-#ifdef __UINT64_TYPE__
-typedef __uint64_t time32_t;
-#endif
-#else
-#ifdef __UINT32_TYPE__
-typedef __uint32_t time32_t;
-#else
-typedef unsigned long time32_t;
-#endif
-#endif
 // This ugly hack allows us to define C++ overloaded functions, when included
 // from within an extern "C", as newlib's sys/stat.h does.  Actually it is
 // intended to include "time.h" from the C library (on ARM, but AVR does not

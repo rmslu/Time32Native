@@ -40,14 +40,13 @@
   1.1.2 5 Apr 2023 - fixed leap_seconds function and data.
   1.1.3 13 Apr 2023 - fixed definition #define DAYS_PER_A_WEEK ((time32_t)(7UL)) to prevent
 			conflict with NEOGPS library.
+  
+  -------------------------------- Time32Native ------------------------------------------
+
+  1.1.3 30 May 2025 - ported to native platform
 */
 
-#if ARDUINO >= 100
-#include <Arduino.h> 
-#else
-#include <WProgram.h> 
-#endif
-
+#include <Arduino.h>
 #include "TimeLib32.h"
 
 static tmElements_t tm;      // a cache of time elements
